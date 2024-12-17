@@ -1,0 +1,287 @@
+/* Color Palette */
+:root {
+  --primary-color: #638ECB;
+  --secondary-color: #395886;
+  --accent-color: #ffcc00;
+  --background-color: #f4f4f9;
+  --text-color: #ffffff;
+  --text-dark-color: #000000;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-dark-color);
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 16px 24px 0px 24px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 8px 2rem;
+  border-radius: 8px;
+
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px 16px ; 
+}
+
+.detail-user{
+  display: flex;
+  flex-direction: column;
+}
+
+.user-icon {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 300px; 
+  /* height: 100vh; */
+  /* background-color: var(--secondary-color); */
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-sidebar {
+  list-style: none;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: stretch; /* Semua item akan mengisi lebar sidebar */
+  gap: 4px; 
+  width: 100%; 
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper-menu {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.menu-item {
+  display: flex; 
+  align-items: center; /* Vertikal align ke tengah */
+  padding: 15px 20px; /* Padding di kiri dan kanan */
+  font-size: 18px;
+  color: #000000;
+  /* background-color: var(--primary-color); */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%; 
+}
+
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Lebar tetap untuk semua ikon */
+  font-size: 24px; /* Ukuran ikon */
+  /* color: var(--text-color); */
+  color: #000000;
+
+}
+
+.menu-item:hover {
+  background-color: var(--primary-color);
+  /* color: var(--text-dark-color); */
+}
+
+.menu-item:hover .menu-icon {
+  color: var(--text-color);
+  /* background-color: var(--primary-color); */
+}
+
+.menu-item:hover .menu-name {
+  color: var(--text-color); /* Ubah warna teks menu saat hover */
+  /* background-color: var(--primary-color); */
+
+}
+
+.menu-name {
+  font-size: 18px;
+  flex: 1; 
+  margin-left: 10px; /* Jarak teks dari ikon */
+  text-align: left; /* Memastikan teks rata kiri */
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; 
+}
+
+.submit-button:hover {
+  background-color: var(--accent-color);
+  color: var(--text-dark-color);
+}
+.content {
+  flex: 1;
+  background-color: var(--background-color);
+  padding: 2rem;
+}
+
+.content h2 {
+  margin-bottom: 1rem;
+}
+
+.kategori-beasiswa-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; /* Mendorong elemen ke sisi kanan */
+  align-items: flex-start; /* Menyelaraskan elemen ke atas */
+  background-color: var(--primary-color);
+  height: 77vh;
+  border-radius: 8px;
+  padding: 16px; /* Jarak konten dari tepi container */
+}
+
+.header-kategori {
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+}
+
+.icon-kategori {
+  font-size: 40px; 
+  color: var(--text-color); 
+}
+
+.nama-kategori {
+  font-size: 24px; 
+  font-weight: bold; 
+  color: var(--text-color); 
+}
+
+
+* Container utama */
+.kategori-beasiswa-container {
+  background-color: var(--primary-color);
+  height: 77vh;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+}
+
+.header-kategori {
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  margin-bottom: 16px; 
+}
+
+.icon-kategori {
+  font-size: 24px; 
+  color: #000; 
+}
+
+.nama-kategori {
+  font-size: 18px; 
+  font-weight: bold; 
+  color: #000; 
+}
+
+.pilihan-beasiswa {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+  width: 100%; 
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.card-beasiswa {
+  background-color: var(--background-color); 
+  color: var(--text-dark-color);
+  padding: 20px;
+  border-radius: 12px;
+  width: 40%; 
+  text-align: center; 
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card-beasiswa:hover {
+  background-color: var(--accent-color); 
+  transform: translateY(-10px); 
+}
+
+.card-beasiswa h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.card-beasiswa p {
+  font-size: 0.9rem;
+  color: var(--text-dark-color);
+}
+
+/* .submit-button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%; 
+  text-align: center;
+} */
+
+.submit-button:hover {
+  background-color: var(--accent-color);
+  color: var(--text-dark-color);
+}
